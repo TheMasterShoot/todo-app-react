@@ -34,7 +34,7 @@ export const TodoAdd = ({handleAddTodo}) => {
                         type='text'
                         name='description'
                         className='form-control'
-                        placeholder='Aprender ...'
+                        placeholder='To do ...'
                         autoComplete='off'
                         value={description}
                         onChange={handleInputChange}/>
