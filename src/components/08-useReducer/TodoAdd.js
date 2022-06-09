@@ -26,10 +26,8 @@ export const TodoAdd = ({handleAddTodo}) => {
 
   return (
     <>
-        <h4>TODO</h4>
-                <hr/>
-
                 <form onSubmit={handleSubmit}>
+                    <span></span>
                     <input 
                         type='text'
                         name='description'
