@@ -44,34 +44,36 @@ export const TodoApp = () => {
 
   return (
     <>
-        <h1>T O D O</h1>
-        <div class="theme-block">
-            <input type="checkbox" name="theme" id="theme"/>
-            <label for="theme"></label>
-        </div>
-        <hr/>
+        <header className='flex-row'>
+            <h1>TODO</h1>
+            <div className="theme-block">
+                <input type="checkbox" name="theme" id="theme" />
+                <label htmlFor="theme"></label>
+            </div>
+        </header>
 
-            <div className='add-new-item'>
+        <main>
+            
                 <TodoAdd
                     handleAddTodo={handleAddTodo}
                 />
-            </div>
+            
 
-            <div className='content'>
+            <section className='content'>
                 <TodoList
                     todos = {todos}
                     handleDelete = {handleDelete}
                     handleToggle = {handleToggle}
                 />
-            </div>
+            </section>
 
             <div className='bottom-item flex-row'>
                 <div className='item-left'>
-                    <span>{todos.length}</span> items left
+                    <span>{todos.length} items left</span>
                 </div>
                 <div className='filter flex-row'>
                     <label>
-                        <input type={'radio'} name="filter" id='all' checked/>
+                        <input type={'radio'} name="filter" id='all' defaultChecked/>
                         <span>All</span>
                     </label>
                     <label>
@@ -85,6 +87,7 @@ export const TodoApp = () => {
                 </div>
                 <span className='clear'>Clear Completed</span>
             </div>
+        </main>
             
             
     </>

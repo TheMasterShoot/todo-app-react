@@ -27,20 +27,24 @@ export const TodoAdd = ({handleAddTodo}) => {
   return (
     <>
                 <form onSubmit={handleSubmit}>
+                <div className='add-new-item flex-row'>
                     <span></span>
                     <input 
                         type='text'
                         name='description'
-                        className='form-control'
+                        id='addItem'
+                        // className='form-control'
                         placeholder='Create a new todo...'
                         autoComplete='off'
                         value={description}
                         onChange={handleInputChange}/>
-                    <button 
+                    {/* <button 
                         type='submit'
-                        className='btn btn-outline-primary mt-1 w-100'>
+                        className='btn btn-outline-primary mt-1 w-100'
+                        >
                         Agregar
-                    </button>
+                    </button> */}
+                    </div>
                 </form>
     </>
   )
