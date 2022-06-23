@@ -42,12 +42,22 @@ export const TodoApp = () => {
         });
     }
 
+    const changeTheme = () => {
+        
+        const theme = document.getElementById('theme');
+
+        theme.addEventListener('click', () => {
+        document.querySelector('body').classList = ( theme.checked ? 'theme-light' : 'theme-dark' );
+        }); 
+    }
+
+
   return (
     <>
         <header className='flex-row'>
             <h1>TODO</h1>
             <div className="theme-block">
-                <input type="checkbox" name="theme" id="theme" />
+                <input type="checkbox" name="theme" id="theme" onClick={ changeTheme } />
                 <label htmlFor="theme"></label>
             </div>
         </header>
@@ -65,31 +75,30 @@ export const TodoApp = () => {
                     handleDelete = {handleDelete}
                     handleToggle = {handleToggle}
                 />
-            </section>
+            
 
-            <div className='bottom-item flex-row'>
-                <div className='item-left'>
-                    <span>{todos.length} items left</span>
+                <div className='bottom-item flex-row'>
+                    <div className='item-left'>
+                        <span>{todos.length} items left</span>
+                    </div>
+                    <div className='filter flex-row'>
+                        <label>
+                            <input type={'radio'} name="filter" id='all' defaultChecked/>
+                            <span>All</span>
+                        </label>
+                        <label>
+                            <input type={'radio'} name="filter" id='active'/>
+                            <span>Active</span>
+                        </label>
+                        <label>
+                            <input type={'radio'} name="filter" id='complete'/>
+                            <span>Completed</span>
+                        </label>
+                    </div>
+                    <span className='clear'>Clear Completed</span>
                 </div>
-                <div className='filter flex-row'>
-                    <label>
-                        <input type={'radio'} name="filter" id='all' defaultChecked/>
-                        <span>All</span>
-                    </label>
-                    <label>
-                        <input type={'radio'} name="filter" id='active'/>
-                        <span>Active</span>
-                    </label>
-                    <label>
-                        <input type={'radio'} name="filter" id='complete'/>
-                        <span>Completed</span>
-                    </label>
-                </div>
-                <span className='clear'>Clear Completed</span>
-            </div>
-        </main>
-            
-            
+            </section>
+        </main>           
     </>
   )
 }

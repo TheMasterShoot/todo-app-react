@@ -31,16 +31,22 @@
     --font-color-hover: #FFF;
     --main-bg: var(--very-dark-blue);
     --todo-bg: var(--very-dark-desaturated-blue);
-    --todo-shadow: var(--very-dark-grayish-blue);
+    --todo-shadow: var(--very-dark-grayish-blue-blue);
+    --line-color: var(--very-dark-grayish-blue3);
+    --font-filter-color: var(--very-dark-grayish-blue2);
+    --font-color-bottom: var(--very-dark-grayish-blue2);
 }
 
 .theme-light {
     --bg-top-image: 0 0 url(../../assets/images/bg-desktop-light.jpg) no-repeat;
-    --font-color: var(--dark-grayish-blue);
+    --font-color: var(--very-dark-grayish-blue);
     --font-color-hover: var(--very-dark-blue);
     --main-bg: var(--very-light-gray);
     --todo-bg: var(--very-light-gray);
     --todo-shadow: var(--very-dark-blue);
+    --line-color: var(--very-light-grayish-blue);
+    --font-filter-color: var(--dark-grayish-blue);
+    --font-color-bottom: var(--dark-grayish-blue);
 }
 
 * {
@@ -124,7 +130,7 @@ h1 {
 }
 
 .add-new-item span {
-    border: 1px solid var(--very-dark-grayish-blue3);
+    border: 1px solid var(--line-color);
     border-radius: 50px;
     display: block;
     height: 22px;
@@ -146,7 +152,7 @@ ul {
 }
 
 ul li {
-    border-bottom: 1px solid var(--very-dark-grayish-blue3);
+    border-bottom: 1px solid var(--line-color);
     min-height: 60px;
     padding: 0;
     position: relative;
@@ -179,7 +185,7 @@ ul li label {
 }
 
 ul li input[type='checkbox'] ~ .checkmark {
-    border: 1px solid var(--very-dark-grayish-blue3);
+    border: 1px solid var(--line-color);
     border-radius: 50px;
 }
 
@@ -204,7 +210,7 @@ ul li input[type='checkbox']:checked ~ .checkmark {
 }
 
 ul li input[type='checkbox']:checked ~ .text{
-    color: var(--very-dark-grayish-blue3);
+    color: var(--line-color);
     text-decoration: line-through;
 }
 
@@ -237,7 +243,7 @@ ul li:hover .remove {
 }
 
 .filter {
-    color: var(--very-dark-grayish-blue2);
+    color: var(--font-filter-color);
     font-weight: 700;
     margin-left: 45px;
 }
@@ -265,11 +271,11 @@ ul li:hover .remove {
 }
 
 .item-left {
-    color: var(--very-dark-grayish-blue2);
+    color: var(--font-color-bottom);
 }
 
 .clear {
-    color: var(--very-dark-grayish-blue2);
+    color: var(--font-color-bottom);
     cursor: pointer;
 }
 
