@@ -13,7 +13,7 @@
     "main.0b5fe565.js.map": "./static/js/main.0b5fe565.js.map"
   },
   "entrypoints": [
-    "static/css/main.ea8a1305.css",
+    "./static/css/main.ea8a1305.css",
     "./static/js/main.0b5fe565.js"
   ]
 }
